@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
 
+import logo from '../assets/logo-clean.png';
+
 export default function Navbar() {
     const { currentUser, logout } = useAuth();
     const [open, setOpen] = useState(false);
@@ -26,7 +28,7 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Link to="/dashboard" className="flex items-center group relative z-10">
                             <div className="relative flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-                                <img src="src/assets/remove background fr.png" alt="Smart Issue Board" className="h-32 w-auto object-contain absolute -left-6 top-1/2 -translate-y-1/2 drop-shadow-sm filter brightness-110 transition-all" />
+                                <img src={logo} alt="Smart Issue Board" className="h-32 w-auto object-contain absolute -left-6 top-1/2 -translate-y-1/2 drop-shadow-sm filter brightness-110 transition-all" />
                                 <div className="ml-24 font-bold text-xl tracking-tight text-white hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 -translate-x-2 group-hover:translate-x-0">
                                     Smart Issue Board
                                 </div>
